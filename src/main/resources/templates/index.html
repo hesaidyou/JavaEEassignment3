@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<div th:each="myname : ${username}">
+		<p><a th:href="@{/join(msg=${myname})}"> 加入俱乐部 </a></p>
+	</div>
+	<a href="/receive"> 查看俱乐部加入信息 </a>
+	
+</body>
+</html>
+
+<!-- 这样写入URL信息，以及变量@{/join(msg=${myname} + ' join in')} -->
